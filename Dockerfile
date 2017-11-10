@@ -17,8 +17,8 @@ ENV PATH="${PATH}:${JAVA_HOME}/bin"
 # Do not use alias cp
 RUN   yum install -y zip unzip tar curl wget 
 
-
+WORKDIR /opt
 # ADD resources/jdk*.tar.gz /usr/local/
-RUN wget http://qx24.cn/jdk1.8.0_65.zip -O /opt/jdk1.8.0_65.zip \
-    && unzip /opt/jdk1.8.0_65.zip  -C /opt/ \
-    && \rm -f /opt/jdk1.8.0_65.zip
+RUN wget http://qx24.cn/jdk1.8.0_65.zip
+RUN unzip  jdk1.8.0_65.zip  
+RUN rm -f  jdk1.8.0_65.zip
