@@ -10,7 +10,7 @@ RUN localedef -c -f UTF-8 -i zh_CN zh_CN.utf8 #配置显示中文
 
 ENV JAVA_VERSION="1.8.0_65"
 
-ENV JAVA_HOME="/usr/local/jdk${JAVA_VERSION}"
+ENV JAVA_HOME="/opt/jdk${JAVA_VERSION}"
 
 ENV PATH="${PATH}:${JAVA_HOME}/bin"
 
