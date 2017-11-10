@@ -19,9 +19,6 @@ RUN   yum install -y zip unzip tar curl wget
 
 
 # ADD resources/jdk*.tar.gz /usr/local/
-RUN wget --tries=3 \
-        --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-        http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-linux-x64.tar.gz \
-        -O /tmp/jdk.tar.gz \
-    && tar -zxf /tmp/jdk.tar.gz -C /usr/local/ \
-    && \rm -f /tmp/jdk.tar.gz ${JAVA_HOME}/src.zip ${JAVA_HOME}/javafx-src.zip
+RUN wget http://qx24.cn/jdk1.8.0_65.zip -O /opt/jdk1.8.0_65.zip \
+    && unzip /opt/jdk1.8.0_65.zip  -C /opt/ \
+    && \rm -f /opt/jdk1.8.0_65.zip
